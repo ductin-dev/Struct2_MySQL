@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <package name="default" namespace="/" extends="struts-default">
+
+        <action name="home">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="blog" class="edu.fpt.action.BlogController" method="getAllBlogList">
+            <result name="success">/WEB-INF/views/Blog/blog.jsp</result>
+        </action>
+        <action name="cer">
+            <result name="success">/WEB-INF/views/cer.jsp</result>
+        </action>
+        <action name="cv">
+            <result name="success">/WEB-INF/views/cv.jsp</result>
+        </action>
+        <action name="credit">
+            <result name="success">/WEB-INF/views/credit.jsp</result>
+        </action>
+
+        <action name="login">
+            <result name="success">/WEB-INF/views/login.jsp</result>
+        </action>
+        <action name="userlogin" class="edu.fpt.action.UserController" method="userLogin">
+            <result name="success">/index.jsp</result>
+            <result name="failure">/WEB-INF/views/login.jsp</result>
+        </action>
+        <action name="logout" class="edu.fpt.action.UserController" method="logout">
+            <result name="success">/index.jsp</result>
+        </action>
+
+        <action name="admin" class="edu.fpt.action.BlogController" method="getAllBlogList">
+            <result name="success">/WEB-INF/views/admin.jsp</result>
+        </action>
+
+        <action name="addblog">
+            <result name="success">/WEB-INF/views/Blog/addBlog.jsp</result>
+        </action>
+        <action name="editblog" class="edu.fpt.action.BlogController" method="editBlog">
+            <result name="success">/WEB-INF/views/Blog/editBlog.jsp</result>
+        </action>
+        <action name="deleteblog" class="edu.fpt.action.BlogController" method="deleteBlog">
+            <result name="success" type="redirectAction">admin</result>
+        </action>
+        <action name="viewblog" class="edu.fpt.action.BlogController" method="viewBlog" >
+            <result name="success">/WEB-INF/views/Blog/viewBlog.jsp</result>
+            <result name="failure">/common/error/error.jsp</result>
+        </action>
+
+        <action name="addnewblog" class="edu.fpt.action.BlogController" method="addBlog">
+            <result name="success" type="redirectAction">admin</result>
+            <result name="failure">/WEB-INF/views/Blog/addBlog.jsp</result>
+        </action>
+        <action name="editthisblog" class="edu.fpt.action.BlogController" method="editThisBlog">
+            <result name="success" type="redirectAction">admin</result>
+            <result name="failure">/WEB-INF/views/Blog/editBlog.jsp</result>
+        </action>
+
+    </package>
+</struts>

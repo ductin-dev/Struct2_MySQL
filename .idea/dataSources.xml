@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySql_doanductin8122000" uuid="bbe890dc-9bfb-4003-83b0-a4cb5a8db9d1">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>For Official Popures</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12349321</jdbc-url>
+    </data-source>
+  </component>
+</project>
